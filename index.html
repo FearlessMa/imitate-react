@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+<div id="app" onclick="hello()"></div>
+<div id="app1"></div>
+<div id="test"></div>
+
+<script>
+    document.getElementById('app').innerHTML='hello world';
+</script>
+<script type="text/babel">
+    ReactDOM.render(<span>'hello react'</span>,document.getElementById("app1"));
+
+    function hello(){
+        alert('hello click')
+    }
+
+
+    var element = React.createElement('div',{id:'test',onClick:hello},'click me')
+
+    ReactDOM.render(element,document.getElementById("test"))
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script src="react.js"></script>
+</head>
+<body>
+<div id="app" ></div>
+<div id="app1" ></div>
+<div id="app2" ></div>
+
+<script type="text/babel">
+
+    class Content extends React.Component{
+        constructor(props){
+            super(props);
+            this.say = this.say.bind(this)
+        }
+
+        say (){
+            alert(123)
+        }
+
+        render(){
+            return <div onClick={this.say}>class </div>
+        }
+    }
+    React.render(
+        <Content/>,
+        document.getElementById('app')
+    )
+
+    React.render(
+        'text',document.getElementById('app1')
+    )
+    React.render(
+        <div>123</div>,document.getElementById('app2')
+    )
+
+</script>
+</body>
+</html>
