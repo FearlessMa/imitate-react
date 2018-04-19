@@ -52,6 +52,7 @@
     ReactDOMTextComponent.prototype.mountComponent = function (rootID) {
         this._rootNodeID = rootID;
         return '<span data-reactid="' + rootID + '">' + this._currentElement + '</span>';
+        // return this._currentElement
     };
 
 
